@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>showdata</title>
+</head>
+<body>
+    <form action="" method="get">
+        <input type="text" name="search" id="search">
+        <button type="submit">search</button>
+    </form>
+    {% for i in subject%}
+        <li> {{i.id }} {{i.subject_name }} {{i.std }} <a href="{% url 'update' i.pk%}">Edit</a> <a href="{% url 'delete' i.pk%}">Delete</a></li>
+    {% endfor %}
+
+</body>
+</html>
